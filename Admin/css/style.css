@@ -1,0 +1,71 @@
+/* Définition des variables de couleur ci-dessous */
+:root {
+    /* Couleur de backgrounds */
+
+    --bg-color-principal: #00a6ff;
+    --bg-color-secondaire: #929292;
+
+    /* Couleur des textes */
+
+    --txt-color-principal: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg-color-secondaire);
+    position: relative;
+}
+
+
+.bg-principal-color,
+.footer,
+.navbar {
+    background-color: var(--bg-color-principal);
+}
+
+.bg-second-color{
+    background-color: var(--bg-color-secondaire);
+}
+
+.footer,
+.navbar,
+.navbar-toggler,
+.navbar-toggler,
+.txt-principal-color {
+    color: var(--txt-color-principal);
+}
+
+.bg-white,
+.navbar-toggler,
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler,
+.navbar-toggler,
+.txt-grey {
+    color: grey;
+}
+
+a {
+    color: var(--txt-color-principal);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.blacktxt{
+color:black;
+}
+
+.editor {
+    min-height: 300px;
+    width: 100%;
+    border: 1px solid black;
+}
