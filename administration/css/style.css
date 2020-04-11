@@ -69,3 +69,22 @@ color:black;
     width: 100%;
     border: 1px solid black;
 }
+
+.textimportant{
+    color:rgb(255, 153, 0);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(197, 197, 197);
+}
+
+.txtred{
+    color:red;
+}
+
+.txtgreen{
+    color:green;
+}
+
+.txtorange{
+    color:orange;
+}

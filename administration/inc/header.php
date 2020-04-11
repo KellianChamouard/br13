@@ -13,9 +13,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="informations_club.php">ℹ️ Informations du club</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a
                         class="nav-link dropdown-toggle"
@@ -49,14 +46,24 @@
                         <a class="dropdown-item" href="dirigeants.php">Dirigeants</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="calendrier.php">📅 Calendrier</a>
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        ⚙️ Paramètres
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="informations_club.php">Paramètres du club</a>
+                        <a class="dropdown-item" href="informations_site.php">Paramètres du site</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="résultats.php">📰 Résultats</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="parametres_site.php">⚙️ Paramètres du site</a>
+                    <a class="nav-link" href="calendrier.php">📅 Calendrier & Résultats</a>
                 </li>
             </ul>
         </div>

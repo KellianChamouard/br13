@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <?php include('inc/head.php')?>
-        <title>Informations Club -</title>
+        <title>Paramètres du Club -</title>
     </head>
     <body>
         <?php include('inc/header.php')?>
@@ -14,7 +14,7 @@
                     <div class="card bg-light mb-3">
                         <div class="card-header">🏉 Belvèze Razes MJC XIII</div>
                         <div class="card-body">
-                            <h5 class="card-title">Informations du Club</h5>
+                            <h5 class="card-title">Paramètres du Club</h5>
                             <p class="card-text">Vous devez rentrer ici toutes les informations concernant
                                 le club. Que ce soit son nom, ses couleurs, sa localisation, etc...
                                 <br><br>
