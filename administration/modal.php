@@ -15,57 +15,32 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="./index.php" method="post">
+                <form action="../database/addnote.php" method="post">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Date</span>
+                            <span class="input-group-text" id="basic-addon1" name="datenote">Date</span>
                         </div>
                         <input class="form-control" type="date" name="datenote"></div>
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="exampleRadios"
-                                id="exampleRadios1"
-                                value="option1"
-                                checked="checked">
-                                <label class="form-check-label" for="exampleRadios1">
-                                    <span class="txtred">Très Important</span>
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="exampleRadios"
-                                    id="exampleRadios2"
-                                    value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        <span class="txtorange">Important</span>
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="exampleRadios"
-                                        id="exampleRadios2"
-                                        value="option2">
-                                        <label class="form-check-label" for="exampleRadios2">
-                                            <span class="txtgreen">Pas Important</span>
-                                        </label>
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Note : <b>30/40 mots maximum</b></label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                    </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
-                                <button type="submit" class="btn btn-primary">Ajouter la note</button>
-                            </div>
-                            </form>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Importance de la note</label>
+                            <select multiple="multiple" class="form-control" id="exampleFormControlSelect2" name="importancenote">
+                                <option>Très Important</option>
+                                <option>Important</option>
+                                <option>Pas Important</option>
+                            </select>
                         </div>
-                    </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Note :
+                                    <b>30/40 mots maximum</b>
+                                </label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="contentnote"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
+                            <button type="submit" class="btn btn-primary">Ajouter la note</button>
+                        </div>
+                    </form>
                 </div>
+            </div>
+        </div>

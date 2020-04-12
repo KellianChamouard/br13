@@ -6,6 +6,7 @@
         <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
+    <?php include('../database/database.php');?>
         <?php include('inc/header.php')?>
 
         <div class="container-fluid mt-4">

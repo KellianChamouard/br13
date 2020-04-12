@@ -7,6 +7,8 @@
     <body>
         <?php include('inc/header.php')?>
 
+        <?php include('../database/database.php')?>
+
         <div class="container-fluid mt-4">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 p5">
@@ -46,50 +48,7 @@
                         <?php include('modal.php');?>
                         <div class="card-body overflow-auto">
 
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <strong>01/01/20 :</strong>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolor ab
-                                minima debitis aspernatur expedita cum optio labore officia blanditiis!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <strong>01/01/20 :</strong>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolor ab
-                                minima debitis aspernatur expedita cum optio labore officia blanditiis!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <strong>01/01/20 :</strong>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolor ab
-                                minima debitis aspernatur expedita cum optio labore officia blanditiis!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <strong>01/01/20 :</strong>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolor ab
-                                minima debitis aspernatur expedita cum optio labore officia blanditiis!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <strong>01/01/20 :</strong>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolor ab
-                                minima debitis aspernatur expedita cum optio labore officia blanditiis!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
+                        <?php include('../database/recupnote.php');?>
 
                         </div>
                     </div>
@@ -112,20 +71,23 @@
 
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 p5">
+                
+                <?php include('../database/recupsocial.php');?>
 
                     <div class="card bg-light mb-3" style="min-height: 350px; max-height: 350px;">
                         <div class="card-header">👨‍👩‍👦 Réseaux Sociaux</div>
                         <div class="card-body">
                             <p>
-                                <form action="index.php" method="post">
+                                <form action="../database/addsocial.php" method="post">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1"><img src="./img/insta.png" style="width:15px; height:15px;"></span>
                                         </div>
-                                        <input
+                                        <input 
+                                            name="url_insta"
                                             type="text"
                                             class="form-control"
-                                            placeholder="Insérer ici le lien vers Instagram"
+                                            value="<?php echo $datap['url_social'];?>"
                                             aria-label="Username"
                                             aria-describedby="basic-addon1">
                                     </div>
@@ -138,9 +100,10 @@
                                             <span class="input-group-text" id="basic-addon1"><img src="./img/fb.png" style="width:15px; height:15px;"></span>
                                         </div>
                                         <input
+                                            name="url_fb"
                                             type="text"
                                             class="form-control"
-                                            placeholder="Insérer ici le lien vers Facebook"
+                                            value="<?php echo $datas['url_social'];?>"
                                             aria-label="Username"
                                             aria-describedby="basic-addon1">
                                     </div>
@@ -153,9 +116,10 @@
                                             <span class="input-group-text" id="basic-addon1"><img src="./img/yt.png" style="width:15px; height:15px;"></span>
                                         </div>
                                         <input
+                                            name="url_yt"
                                             type="text"
                                             class="form-control"
-                                            placeholder="Insérer ici le lien vers Youtube"
+                                            value="<?php echo $datat['url_social'];?>"
                                             aria-label="Username"
                                             aria-describedby="basic-addon1">
                                     </div>
@@ -168,9 +132,10 @@
                                             <span class="input-group-text" id="basic-addon1"><img src="./img/twitter.png" style="width:15px; height:15px;"></span>
                                         </div>
                                         <input
+                                            name="url_twitter"
                                             type="text"
                                             class="form-control"
-                                            placeholder="Insérer ici le lien vers Twitter"
+                                            value="<?php echo $dataq['url_social'];?>"
                                             aria-label="Username"
                                             aria-describedby="basic-addon1">
                                     </div>

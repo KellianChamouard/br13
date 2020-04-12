@@ -6,6 +6,7 @@
         <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
+    <?php include('../database/database.php');?>
         <?php include('inc/header.php')?>
 
         <div class="container-fluid mt-4">
@@ -39,78 +40,8 @@
                         </div>
                         <div class="card-body overflow-auto">
 
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>
-                                        <b>Titre</b>
-                                        | Date</p>
-                                    <a href="#" class="badge badge-danger">Supprimer</a>
-                                    <a href="form_modif_article.php" class="badge badge-warning text-white">Modifier</a>
-                                    <a href="#" class="badge badge-primary">Partager</a>
-                                    <a href="#" class="badge badge-info">Voir sur le site</a>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>
-                                        <b>Titre</b>
-                                        | Date</p>
-                                    <a href="#" class="badge badge-danger">Supprimer</a>
-                                    <a href="form_modif_article.php" class="badge badge-warning text-white">Modifier</a>
-                                    <a href="#" class="badge badge-primary">Partager</a>
-                                    <a href="#" class="badge badge-info">Voir sur le site</a>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>
-                                        <b>Titre</b>
-                                        | Date</p>
-                                    <a href="#" class="badge badge-danger">Supprimer</a>
-                                    <a href="form_modif_article.php" class="badge badge-warning text-white">Modifier</a>
-                                    <a href="#" class="badge badge-primary">Partager</a>
-                                    <a href="#" class="badge badge-info">Voir sur le site</a>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>
-                                        <b>Titre</b>
-                                        | Date</p>
-                                    <a href="#" class="badge badge-danger">Supprimer</a>
-                                    <a href="form_modif_article.php" class="badge badge-warning text-white">Modifier</a>
-                                    <a href="#" class="badge badge-primary">Partager</a>
-                                    <a href="#" class="badge badge-info">Voir sur le site</a>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>
-                                        <b>Titre</b>
-                                        | Date</p>
-                                    <a href="#" class="badge badge-danger">Supprimer</a>
-                                    <a href="form_modif_article.php" class="badge badge-warning text-white">Modifier</a>
-                                    <a href="#" class="badge badge-primary">Partager</a>
-                                    <a href="#" class="badge badge-info">Voir sur le site</a>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>
-                                        <b>Titre</b>
-                                        | Date</p>
-                                    <a href="#" class="badge badge-danger">Supprimer</a>
-                                    <a href="form_modif_article.php" class="badge badge-warning text-white">Modifier</a>
-                                    <a href="#" class="badge badge-primary">Partager</a>
-                                    <a href="#" class="badge badge-info">Voir sur le site</a>
-                                </div>
-                            </div>
-                            <br>
+                           <?php include('../database/recuparticle.php');?> 
+
                         </div>
                     </div>
                 </div>

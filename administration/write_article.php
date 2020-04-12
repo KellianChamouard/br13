@@ -6,6 +6,7 @@
         <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
+        <?php include('../database/database.php');?>
         <?php include('inc/header.php')?>
 
         <div class="container-fluid mt-4">
@@ -31,43 +32,48 @@
                         <div class="card-header">📝 Écrire un article
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="../database/addarticle.php">
                                 <div class="form-group">
-                                <label>Titre</label>
-                                    <input class="form-control" type="text" placeholder="Titre de l'article">
+                                    <label>Titre</label>
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Titre de l'article"
+                                        name="article_name">
                                 </div>
                                 <div class="form-group">
-                                <label>Auteur</label>
-                                    <input class="form-control" type="text" placeholder="Auteur">
+                                    <label>Auteur</label>
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Auteur"
+                                        name="article_author">
                                 </div>
                                 <div class="form-group">
-                                <label>Date</label>
-                                <input class="form-control" type="date" name="publidate">
+                                    <label>Date</label>
+                                    <input class="form-control" type="date" name="article_date">
                                 </div>
                                 <div class="form-group">
-                                <label>Heure</label>
-                                <input class="form-control" type="time" name="publitime">
+                                    <label>Heure</label>
+                                    <input class="form-control" type="time" name="article_time">
                                 </div>
                                 <div class="form-group">
-                                <label>Article</label>
-                                    <textarea name="editor1" id="editor1" rows="10" cols="80">
-                                        Écrivez votre article ici !
-                                    </textarea>
-                                    <script>
-                                        // Replace the <textarea id="editor1"> with a CKEditor instance, using default
-                                        // configuration.
-                                        CKEDITOR.replace('editor1');
-                                    </script><br>
+                                    <label>Article</label>
+                                    <textarea name="article_content" id="editor1" rows="10" cols="80"></textarea><br>
+                                    </div>
                                     <input
                                         class="btn btn-primary float-right"
                                         type="submit"
                                         value="Mettre en ligne">
-                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
-
+                <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor instance, using default
+                    // configuration.
+                    CKEDITOR.replace('editor1');
+                </script>
                 <script type="text/javascript" src="js/js.js"></script>
             </body>
         </html>
