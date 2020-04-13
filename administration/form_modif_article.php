@@ -6,7 +6,7 @@
         <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
-    <?php include('../database/database.php');?>
+    <?php include('../database/modifarticle.php');?>
         <?php include('inc/header.php')?>
 
         <div class="container-fluid mt-4">
@@ -28,30 +28,30 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 p5">
 
                     <div class="card bg-light mb-3">
-                        <div class="card-header">📝 Modifier l'article : <b>Nom de l'article</b>
+                        <div class="card-header">📝 Modifier l'article : <b><?php echo $datap['article_name'];?></b>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
                                 <label>Titre</label>
-                                    <input class="form-control" type="text" placeholder="Titre de l'article">
+                                    <input class="form-control" type="text"  value="<?php echo $datap['article_name'];?>" placeholder="Titre de l'article">
                                 </div>
                                 <div class="form-group">
                                 <label>Auteur</label>
-                                    <input class="form-control" type="text" placeholder="Auteur">
+                                    <input class="form-control" type="text" value="<?php echo $datap['article_author'];?>" placeholder="Auteur">
                                 </div>
                                 <div class="form-group">
                                 <label>Date</label>
-                                <input class="form-control" type="date" name="publidate" readonly>
+                                <input class="form-control" type="date" name="publidate" value="<?php echo $datap['article_date'];?>" readonly>
                                 </div>
                                 <div class="form-group">
                                 <label>Heure</label>
-                                <input class="form-control" type="time" name="publitime" readonly>
+                                <input class="form-control" type="time" name="publitime" value="<?php echo $datap['article_time'];?>" readonly>
                                 </div>
                                 <div class="form-group">
                                 <label>Article</label>
                                     <textarea name="editor1" id="editor1" rows="10" cols="80">
-                                        Écrivez votre article ici !
+                                    <?php echo $datap['article_content'];?>
                                     </textarea>
                                     <script>
                                         // Replace the <textarea id="editor1"> with a CKEditor instance, using default

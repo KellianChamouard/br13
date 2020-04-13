@@ -6,7 +6,7 @@
         <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
-    <?php include('../database/database.php');?>
+        <?php include('../database/database.php');?>
         <?php include('inc/header.php')?>
 
         <div class="container-fluid mt-4">
@@ -125,6 +125,7 @@
                         <div class="card-header">🙎🏻‍♂️ Joueurs
                             <div class="form-group float-right ml-2">
                                 <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Tous</option>
                                     <option>Arrière</option>
                                     <option>Aillier</option>
                                     <option>Centre</option>
@@ -139,7 +140,7 @@
                         </div>
                         <div class="card-body overflow-auto">
 
-                        <div class="card">
+                            <div class="card">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-6">
