@@ -29,10 +29,11 @@
 
                     <div class="card bg-light mb-3" style="max-height:500px;">
                         <div class="card-header">📝 Modifier un article
-                            <form class="form-inline my-2 my-lg-0 float-right">
+                            <form method="post" action="#" class="form-inline my-2 my-lg-0 float-right">
                                 <input
                                     class="form-control mr-sm-2 border border-secondary"
-                                    type="search"
+                                    type="text"
+                                    name="keywords"
                                     placeholder="Chercher un article"
                                     aria-label="Search">
                                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">🔎</button>

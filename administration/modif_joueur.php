@@ -6,8 +6,9 @@
         <script src="./ckeditor/ckeditor.js"></script>
     </head>
     <body>
-    <?php include('../database/database.php');?>
-        <?php include('inc/header.php')?>
+           <?php include('inc/header.php')?>
+
+           <?php include('../database/formplayermodif.php')?>
 
         <div class="container-fluid mt-4">
             <div class="row">
@@ -30,17 +31,17 @@
 
                     <div class="card bg-light mb-3" style="max-height:500px;">
                         <div class="card-header">🙎🏻‍♂️ Modifier la fiche de
-                            <b>Nom du Joueur</b>
+                            <b><?php echo $dataplayrecu['pl_name'];?> <?php echo $dataplayrecu['pl_firstname'];?></b>
                         </div>
                         <div class="card-body overflow-auto">
-                            <form action="#">
+                            <form action="../database/modifjoueur.php" method="post">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">Nom</span>
                                             </div>
-                                            <input
+                                            <input value="<?php echo $dataplayrecu['pl_name'];?>" name="pl_name"
                                                 type="text"
                                                 class="form-control"
                                                 placeholder="Nom"
@@ -51,7 +52,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">Prénom</span>
                                             </div>
-                                            <input
+                                            <input value="<?php echo $dataplayrecu['pl_firstname'];?>" name="pl_firstname"
                                                 type="text"
                                                 class="form-control"
                                                 placeholder="Prénom"
@@ -62,13 +63,13 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">Date de Naissance</span>
                                             </div>
-                                            <input class="form-control" type="date" name="naissance">
+                                            <input value="<?php echo $dataplayrecu['pl_birthday'];?>" name="pl_birthday" class="form-control" type="date" name="naissance">
                                         </div>
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Poids</span>
                                             </div>
-                                            <input
+                                            <input value="<?php echo $dataplayrecu['pl_poids'];?>" name="pl_poids"
                                                 type="text"
                                                 class="form-control"
                                                 aria-label="Amount (to the nearest dollar)">
@@ -80,7 +81,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Taille</span>
                                             </div>
-                                            <input
+                                            <input value="<?php echo $dataplayrecu['pl_taille'];?>" name="pl_taille"
                                                 type="text"
                                                 class="form-control"
                                                 aria-label="Amount (to the nearest dollar)">
@@ -92,7 +93,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Poste</span>
                                             </div>
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <select value="<?php echo $dataplayrecu['pl_poste'];?>" name="pl_poste" class="form-control" id="exampleFormControlSelect1">
                                                 <option>Arrière</option>
                                                 <option>Aillier</option>
                                                 <option>Centre</option>
@@ -109,12 +110,12 @@
                                 <div class="row">
                                     <div class="col-6 d-flex justify-content-between">
                                         <img
-                                            src="http://placehold.it/100x100"
+                                            src="<?php echo $dataplayrecu['pl_photo'];?>"
                                             alt="Nom du Joueur"
                                             style="width:100px; height:100px; border-radius:50px;">
                                         <div class="form-group">
                                             <label for="exampleFormControlFile1">Photo du joueur</label>
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            <input value="<?php echo $dataplayrecu['pl_photo'];?>" name="pl_photo" type="file" class="form-control-file" id="exampleFormControlFile1">
                                         </div>
                                     </div>
                                     <div class="col-6 d-flex justify-content-center align-items-center"><input class="btn btn-primary" type="submit" value="Modifier le joueur"></div>
